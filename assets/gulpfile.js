@@ -3,15 +3,9 @@
 var gulp            = require('gulp'),
     stylus          = require('gulp-stylus'),
     autoprefixer    = require('gulp-autoprefixer'),
-    // browserSync     = require('browser-sync').create(),
     concat          = require('gulp-concat'),
     uglify          = require('gulp-uglifyjs'),
-    // del             = require('del'),
-    // cache           = require('gulp-cache'),
-    // imagemin        = require('gulp-imagemin'),
-    // pngquant        = require('imagemin-pngquant'),
     csso            = require('gulp-csso');
-    // pug             = require('gulp-pug');
 
 // Работа со Stylus --------------------------------------------------------------------
 
@@ -24,7 +18,7 @@ gulp.task('stylus', function() {
         }))
         .pipe(autoprefixer(['last 2 version']))
         .pipe(csso())
-        .pipe(gulp.dest('css/main.min.css'));
+        .pipe(gulp.dest('css'));
 });
 
 // Работа с JavaScript --------------------------------------------------------------------
