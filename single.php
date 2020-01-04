@@ -17,14 +17,19 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			?>
+				
+				<article>
+					<h1 class="portfolio__title"><?php the_title(); ?></h1>
+					<?php the_content(); ?>
+				</article>
 
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+				<div class="nav-links">
+					<p>Навигация по проектам</p>
+					<?php echo get_previous_post_link(); ?>
+					<?php echo get_next_post_link(); ?>
+				</div>
+			<?php
 
 		endwhile; // End of the loop.
 		?>
@@ -33,5 +38,4 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

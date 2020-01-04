@@ -9,9 +9,6 @@
 		background-image url('../img/jpg/fon.jpg')
 		background-size cover
 		z-index 1
-	
-	.portfolio
-		padding 50px 50px 0 50px
 
 	.sidebar
 		position fixed
@@ -24,10 +21,19 @@
 @media all and (max-width: 830px)
 	
 	.portfolio
+		padding 0 15px 40px 15px
 		background-color lightBlack
 		margin 0
 		
 		.sidebar
+			
+			&__name
+				padding 50px 20px 20px 20px
+			
+			&__contact
+				padding 35px
+				margin 0 -15px
+				
 			
 			&__copyrite
 				display none
