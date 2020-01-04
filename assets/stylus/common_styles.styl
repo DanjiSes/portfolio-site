@@ -1,0 +1,133 @@
+img
+	width 100%
+	height auto
+
+.portfolio
+	text-align center
+	margin 0 0 0 370px
+	position relative
+	z-index 100
+	
+	* {
+		position relative
+		z-index 100
+	}
+	
+	.sidebar
+		display flex
+		flex-direction column
+		justify-content space-between
+		align-items stretch
+		background-color lightBlack
+		color whiteColor
+		z-index 100
+		text-align left
+		margin 0 0 50px 0
+		
+		&__name
+			padding 50px 40px 40px 40px
+		
+		.btn
+			display inline-block
+			color whiteColor
+			padding 15px 25px
+			background-color btnBgColor
+			box-shadow 0 2px 0 shadowColor
+			margin 0 0 40px 0
+		
+		.name
+			font-size rem(25)
+			margin 0 0 7px 0
+			
+		.name__descr
+			color lightWhite
+		
+		&__contact
+			padding 40px
+			background-color blackBg
+			
+			a
+				color whiteColor
+				transition all .2s
+				display block
+				margin 0 0 15px 0
+				
+				i
+					height 32px
+					width 32px
+					border 1px solid whiteColor
+					border-radius 50%
+					line-height 30px
+					text-align center
+					margin 0 15px 0 0
+					transition all .2s
+					
+				&:hover
+					color btnBgColor
+					
+					i
+						border 1px solid btnBgColor
+						color whiteColor
+		
+		&__copyrite
+			color lightWhite
+			padding 40px
+			text-align center
+			font-size rem(18)
+
+	&__title
+		text-transform uppercase
+		color whiteColor
+		font-size rem(34)
+		font-weight 400
+		padding 0 0 50px 0
+		margin 0 0 50px 0
+		
+		&::after
+			content ''
+			position absolute
+			bottom 0
+			left 50%
+			margin 0 0 0 -50px
+			display block
+			width 100px
+			height 2px
+			background-color rgba(whiteColor,.5)
+	
+	&__list
+		display flex
+		flex-wrap wrap
+		justify-content center
+		align-items flex-start
+	
+	&__item
+		width 100%
+		max-width 300px
+		border-radius 5px
+		overflow hidden
+		margin 0 15px 30px 15px
+		
+	&__img
+		display block
+		max-height 300px
+		overflow hidden
+		border-bottom 2px solid btnBgColor
+	
+	.descr
+		background-color whiteColor
+		padding 40px 20px 20px 20px
+		text-align left
+		
+		a
+			color whiteColor
+			position absolute
+			top 0
+			left 0
+			transform translate(50%, -50%)
+			display block
+			padding 15px 25px
+			background-color btnBgColor
+			box-shadow 0 2px 0 shadowColor
+		
+		p
+			margin 0 0 10px 0
