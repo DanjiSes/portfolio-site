@@ -16,31 +16,46 @@ get_header();
 
         <h1 class="portfolio__title">портфолио</h1>
         <ul class="portfolio__list">
-          <li class="portfolio__item"><a class="portfolio__img" href="/portfolio/sortd" target="_blank"><img src="/portfolio/sortd/screen.png" alt="SORTD"/></a>
-            <div class="descr"><a href="portfolio/sortd" target="_blank">Посмотреть</a>
-              <p>Верстка</p><b>&laquo;<span>SORTD</span>&raquo;</b>
-            </div>
-          </li>
-          <li class="portfolio__item"><a class="portfolio__img" href="/portfolio/otibryu" target="_blank"><img src="/portfolio/otibryu/screen.png" alt="Отибрю"/></a>
-            <div class="descr"><a href="portfolio/otibryu" target="_blank">Посмотреть</a>
-              <p>Верстка</p><b>&laquo;<span>Отибрю</span>&raquo;</b>
-            </div>
-          </li>
-          <li class="portfolio__item"><a class="portfolio__img" href="/portfolio/engineering-construction-pro" target="_blank"><img src="/portfolio/engineering-construction-pro/screen.png" alt="Engineering construction PRO"/></a>
-            <div class="descr"><a href="portfolio/engineering-construction-pro" target="_blank">Посмотреть</a>
-              <p>Верстка</p><b>&laquo;<span>Engineering construction PRO</span>&raquo;</b>
-            </div>
-          </li>
-          <li class="portfolio__item"><a class="portfolio__img" href="/portfolio/unity" target="_blank"><img src="/portfolio/unity/screen.png" alt="Unity"/></a>
-            <div class="descr"><a href="portfolio/unity" target="_blank">Посмотреть</a>
-              <p>Верстка</p><b>&laquo;<span>Unity</span>&raquo;</b>
-            </div>
-          </li>
-          <li class="portfolio__item"><a class="portfolio__img" href="/portfolio/zest" target="_blank"><img src="/portfolio/zest/screen.png" alt="Zest"/></a>
-            <div class="descr"><a href="portfolio/zest" target="_blank">Посмотреть</a>
-              <p>Верстка</p><b>&laquo;<span>Zest</span>&raquo;</b>
-            </div>
-          </li>
+
+          <?php
+          if ( have_posts() ) :
+
+            if ( is_home() && ! is_front_page() ) :
+              ?>
+              <header>
+                <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+              </header>
+              <?php
+            endif;
+
+            /* Start the Loop */
+            while ( have_posts() ) :
+              the_post();
+
+              ?>
+
+              <li class="portfolio__item">
+                <a class="portfolio__img" href="<?php the_permalink(); ?>" target="_blank">
+                  <img src="<?php the_post_thumbnail_url(); ?>" />
+                </a>
+                <div class="descr"><a href="<?php the_permalink(); ?>" target="_blank">Посмотреть</a>
+                  <p><?php the_excerpt(); ?></p><b>&laquo;<span><?php the_title(); ?></span>&raquo;</b>
+                </div>
+              </li>
+
+              <?php
+
+            endwhile;
+
+            // the_posts_navigation();
+
+          else :
+
+            get_template_part( 'template-parts/content', 'none' );
+
+          endif;
+          ?>
+
         </ul>
       </section>
     </div>
