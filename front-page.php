@@ -1,11 +1,10 @@
 <?php 
-
 get_header();
 ?>
     <div class="wrapper">
       <div class="fixed__fon"></div>
       <section class="portfolio">
-        
+
         <div class="sidebar">
           <div class="sidebar__name">
             <p class="name"><?php bloginfo('name') ?></p>
