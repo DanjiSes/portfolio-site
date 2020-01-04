@@ -5,6 +5,7 @@ get_header();
     <div class="wrapper">
       <div class="fixed__fon"></div>
       <section class="portfolio">
+        
         <div class="sidebar">
           <div class="sidebar__name">
             <p class="name"><?php bloginfo('name') ?></p>
@@ -13,6 +14,7 @@ get_header();
           <div class="sidebar__contact"><a href="mailto:danil.savchenko.dev@gmail.com" target="_blank"><i class="fa fa-envelope"></i>danil.savchenko.dev@gmail.com</a><a href="https://vk.com/write378269517" target="_blank"><i class="fa fa-vk"></i>vk.com/savchenko_dev</a><a href="https://www.instagram.com/danil.savchenko.s/" target="_blank"><i class="fa fa-instagram"></i>danil.savchenko.s</a><a href="https://telegram.me/daniel_savchenko" target="_blank"><i class="fa fa-telegram"></i>@daniel_savchenko</a></div>
           <div class="sidebar__copyrite">&#169; <span></span></div>
         </div>
+
         <h1 class="portfolio__title">портфолио</h1>
         <ul class="portfolio__list">
           <li class="portfolio__item"><a class="portfolio__img" href="/portfolio/sortd" target="_blank"><img src="/portfolio/sortd/screen.png" alt="SORTD"/></a>
