@@ -29,6 +29,9 @@
             <p class="name__descr"><?php bloginfo('description') ?></p>
           </div>
           <div class="sidebar__contact">
+            <a href="https://github.com/DanjiSes" target="_blank">
+              <i class="fa fa-github"></i>DanjiSes
+            </a>
             <a href="https://vk.com/write378269517" target="_blank">
               <i class="fa fa-vk"></i>savchenko_dev
             </a>
